@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #111827;
+  --bg-secondary: #1a2436;
+  --bg-card: #1f2d3d;
+  --text: #F8F7F4;
+  --text-muted: #9ca3af;
+  --accent-coral: #E05D3B;
+  --accent-coral-hover: #c94f2e;
+  --accent-gold: #C4973A;
+  --accent-blue: #2C5F8A;
+  --accent-purple: #5B3F8C;
+  --accent-teal: #1E6B5E;
+  --accent-amber: #A0692A;
+  --border: rgba(248, 247, 244, 0.08);
+  --border-strong: rgba(248, 247, 244, 0.15);
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 3px;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-coral);
+  color: var(--text);
+}
+
+/* Reusable hover utilities (no JS needed) */
+.btn-coral {
+  background: var(--accent-coral);
+  color: var(--text);
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-coral:hover {
+  background: var(--accent-coral-hover);
+  transform: scale(1.05);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.btn-ghost:hover {
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+.card-hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.link-muted {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.link-muted:hover {
+  color: var(--text);
+}
+
+.link-arrow {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.link-arrow:hover {
+  color: var(--text);
+}
+
+/* Form inputs */
+.form-input:focus {
+  border-color: var(--accent-coral) !important;
+  outline: none;
+}
+
+/* FAQ details */
+details > summary::-webkit-details-marker { display: none; }
+details[open] > summary .faq-icon { content: "−"; }
+
