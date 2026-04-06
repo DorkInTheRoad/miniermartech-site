@@ -57,7 +57,7 @@ export default function Home() {
               maxWidth: 600,
               marginBottom: 40,
             }}>
-              We design your origination pipeline, model your contacts before they enter the funnel, and convert every campaign into a proprietary intelligence asset your competitors cannot replicate.
+              We design your origination pipeline, model your contacts, simulate their campaigns before they enter the funnel, and convert every campaign into a proprietary intelligence asset your competitors cannot replicate.
             </p>
 
             <div style={{ display: "flex", gap: 20, flexWrap: "wrap", alignItems: "center" }}>
@@ -97,8 +97,8 @@ export default function Home() {
               },
               {
                 num: "02",
-                title: "Pre-flight Validation",
-                desc: "Before any contact group enters the pipeline, it is modeled against your current sequence. The sequence is tuned to the specific cohort before the first message goes out. No blind loads. Ever.",
+                title: "Pre-flight Simulation",
+                desc: "Before any contact group enters the pipeline, it is run through a full simulation against your sequence. We model cohort fit, tune messaging to the specific buyer, and validate before the first message goes out. No blind loads. Ever.",
                 color: "var(--accent-purple)",
                 accent: false,
               },
