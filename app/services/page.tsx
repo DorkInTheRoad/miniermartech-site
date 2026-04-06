@@ -85,26 +85,6 @@ const phases = [
 
 const verticals = [
   {
-    title: "M&A Advisory",
-    icon: "⚖",
-    color: "var(--accent-blue)",
-    points: [
-      "Boutique M&A advisors in the lower-middle market",
-      "Success-fee model — seller origination is the constraint",
-      "Need systematic, data-verified deal flow to compete with larger shops",
-    ],
-  },
-  {
-    title: "Business Brokerage",
-    icon: "🤝",
-    color: "var(--accent-purple)",
-    points: [
-      "IBBA/CBI-credentialed brokers in the $500K–$10M deal range",
-      "Spend more time selling listings than finding sellers",
-      "Need proactive seller identification infrastructure",
-    ],
-  },
-  {
     title: "PE Business Development",
     icon: "📊",
     color: "var(--accent-teal)",
@@ -115,6 +95,16 @@ const verticals = [
     ],
   },
   {
+    title: "M&A Advisory",
+    icon: "⚖",
+    color: "var(--accent-blue)",
+    points: [
+      "Boutique M&A advisors in the lower-middle market",
+      "Success-fee model — seller origination is the constraint",
+      "Need systematic, data-verified deal flow to compete with larger shops",
+    ],
+  },
+  {
     title: "RIA Consolidation & Roll-Up",
     icon: "📈",
     color: "var(--accent-coral)",
@@ -122,6 +112,16 @@ const verticals = [
       "RIA roll-up platforms and acquirers targeting independent advisors",
       "Independent RIA owners managing $100M–$750M AUM are the constraint",
       "Need systematic outreach to reach advisors before a banker does",
+    ],
+  },
+  {
+    title: "Business Brokerage",
+    icon: "🤝",
+    color: "var(--accent-purple)",
+    points: [
+      "IBBA/CBI-credentialed brokers in the $500K–$10M deal range",
+      "Spend more time selling listings than finding sellers",
+      "Need proactive seller identification infrastructure",
     ],
   },
 ];
