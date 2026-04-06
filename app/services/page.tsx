@@ -114,6 +114,16 @@ const verticals = [
       "Need infrastructure that doesn't rely on banker relationships",
     ],
   },
+  {
+    title: "RIA Consolidation & Roll-Up",
+    icon: "📈",
+    color: "var(--accent-coral)",
+    points: [
+      "RIA roll-up platforms and acquirers targeting independent advisors",
+      "Independent RIA owners managing $100M–$750M AUM are the constraint",
+      "Need systematic outreach to reach advisors before a banker does",
+    ],
+  },
 ];
 
 export default function ServicesPage() {
@@ -192,7 +202,7 @@ export default function ServicesPage() {
             <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px, 3vw, 38px)", fontWeight: 700, letterSpacing: "-0.02em", marginBottom: 12 }}>
               Who this is for
             </h2>
-            <p style={{ fontSize: 16, color: "var(--text-muted)" }}>Three operator verticals. One infrastructure problem.</p>
+            <p style={{ fontSize: 16, color: "var(--text-muted)" }}>Four operator verticals. One infrastructure problem.</p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
             {verticals.map((v) => (

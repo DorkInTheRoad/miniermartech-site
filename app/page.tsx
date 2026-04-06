@@ -33,7 +33,7 @@ export default function Home() {
             }}>
               <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#4ade80", flexShrink: 0 }} />
               <span style={{ fontSize: 12, color: "var(--text-muted)", letterSpacing: "0.05em" }}>
-                Campaigns live for M&amp;A advisors, brokers &amp; PE teams
+                Campaigns live for M&amp;A advisors, RIAs, brokers &amp; PE teams
               </span>
             </div>
 
