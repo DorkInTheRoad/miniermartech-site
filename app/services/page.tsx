@@ -6,6 +6,45 @@ export const metadata: Metadata = {
   description: "From infrastructure to intelligence to custom AI engineering. Three-phase service model for M&A advisors, business brokers, and PE deal teams.",
 };
 
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "serviceType": "Outbound Pipeline Design & Execution",
+      "provider": { "@type": "Organization", "name": "Minier MarTech", "url": "https://miniermartech.com" },
+      "description": "ICP design, cohort architecture, data hygiene, and sequence execution for M&A advisors, business brokers, and PE deal teams. Campaigns reach 160–480 contacts per month with 12–24 qualified meetings at the Scale tier.",
+      "areaServed": "United States",
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "1500",
+        "highPrice": "3500",
+        "priceCurrency": "USD",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "unitText": "month" }
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Data Intelligence & Predictive Scoring",
+      "provider": { "@type": "Organization", "name": "Minier MarTech", "url": "https://miniermartech.com" },
+      "description": "Predictive lead scoring, market intelligence reports, and content infrastructure built on behavioral data from active outbound campaigns. Turns campaign signal into a proprietary intelligence asset.",
+      "areaServed": "United States"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Outbound Pipeline Audit",
+      "provider": { "@type": "Organization", "name": "Minier MarTech", "url": "https://miniermartech.com" },
+      "description": "A $750 diagnostic of your current outbound infrastructure, ICP fit, and data quality — the entry point before any retainer commitment.",
+      "areaServed": "United States",
+      "offers": {
+        "@type": "Offer",
+        "price": "750",
+        "priceCurrency": "USD"
+      }
+    }
+  ]
+};
+
 const phases = [
   {
     num: "Phase 1",
@@ -24,11 +63,10 @@ const phases = [
     title: "Data Intelligence",
     timeline: "Months 3–6",
     color: "var(--accent-purple)",
-    desc: "Once your pipeline is generating signal, we model it. Predictive scoring, market intelligence reports, and content infrastructure built on your behavioral data.",
+    desc: "Once your pipeline is generating signal, we model it. Predictive scoring and market intelligence reports built on your behavioral data.",
     tiers: [
       { name: "Predictive Lead Scoring", price: "$750/mo", contacts: "Ongoing model", responses: "Score updates", meetings: "Monthly calibration" },
       { name: "Market Intelligence Reports", price: "$1,200/mo", contacts: "Segment analysis", responses: "ICP refinement", meetings: "Quarterly deep-dives" },
-      { name: "Content Marketing Engine", price: "$2,000/mo", contacts: "Data-driven content", responses: "Distribution strategy", meetings: "8 assets/month" },
     ],
   },
   {
@@ -81,6 +119,10 @@ const verticals = [
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
       <section style={{ padding: "100px 24px 60px", textAlign: "center", borderBottom: "1px solid var(--border)" }}>
         <div style={{ maxWidth: 600, margin: "0 auto" }}>
           <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", color: "var(--text-muted)", textTransform: "uppercase", marginBottom: 16 }}>
@@ -234,13 +276,79 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Ala Carte Services */}
+      <section style={{ padding: "80px 24px", background: "var(--bg-secondary)" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 56 }}>
+            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", color: "var(--text-muted)", textTransform: "uppercase", marginBottom: 12 }}>
+              Standalone Services
+            </div>
+            <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px, 3vw, 38px)", fontWeight: 700, letterSpacing: "-0.02em", marginBottom: 12 }}>
+              Before the retainer — or alongside it
+            </h2>
+            <p style={{ fontSize: 16, color: "var(--text-muted)", maxWidth: 520, margin: "0 auto" }}>
+              Two fixed-scope engagements. No ongoing commitment required.
+            </p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24 }}>
+            {/* Pipeline Audit */}
+            <div style={{ background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: 12, padding: "40px 36px", borderTop: "3px solid var(--accent-coral)" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", color: "var(--accent-coral)", textTransform: "uppercase" as const, marginBottom: 16 }}>
+                Entry Point
+              </div>
+              <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 26, fontWeight: 700, letterSpacing: "-0.02em", marginBottom: 8, color: "var(--text)" }}>
+                $750 Pipeline Audit
+              </h3>
+              <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.7, marginBottom: 28 }}>
+                A diagnostic of your current outbound infrastructure, ICP fit, and data quality. Written assessment with specific recommendations — before any retainer commitment.
+              </p>
+              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 32px", display: "flex", flexDirection: "column", gap: 10 }}>
+                {["ICP definition review", "Contact data quality assessment", "Sequence structure analysis", "Infrastructure gap report", "Prioritized recommendations"].map((item) => (
+                  <li key={item} style={{ display: "flex", gap: 10, fontSize: 14, color: "var(--text-muted)" }}>
+                    <span style={{ color: "var(--accent-coral)", flexShrink: 0 }}>✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact" className="btn-coral" style={{ padding: "13px 28px", borderRadius: 8, fontSize: 14, fontWeight: 600, display: "inline-block" }}>
+                Book a Strategy Call
+              </Link>
+            </div>
+
+            {/* Engine Optimization */}
+            <div style={{ background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: 12, padding: "40px 36px", borderTop: "3px solid var(--accent-teal)" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", color: "var(--accent-teal)", textTransform: "uppercase" as const, marginBottom: 16 }}>
+                Ala Carte
+              </div>
+              <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: 26, fontWeight: 700, letterSpacing: "-0.02em", marginBottom: 8, color: "var(--text)" }}>
+                Engine Optimization
+              </h3>
+              <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.7, marginBottom: 28 }}>
+                SEO, GEO, and AEO audit and optimization — structured so your site gets cited by AI tools (ChatGPT, Perplexity, Google AI Overviews) when your prospects are researching. Built for B2B service businesses.
+              </p>
+              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 32px", display: "flex", flexDirection: "column", gap: 10 }}>
+                {["Technical SEO audit", "LLM crawler configuration (robots.txt, llms.txt)", "JSON-LD schema implementation (Organization, Service, FAQPage)", "AI citation gap analysis", "Off-site citation strategy"].map((item) => (
+                  <li key={item} style={{ display: "flex", gap: 10, fontSize: 14, color: "var(--text-muted)" }}>
+                    <span style={{ color: "var(--accent-teal)", flexShrink: 0 }}>✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact" style={{ padding: "13px 28px", borderRadius: 8, fontSize: 14, fontWeight: 600, display: "inline-block", border: "1px solid var(--accent-teal)", color: "var(--accent-teal)", textDecoration: "none" }}>
+                Start a Conversation
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section style={{ padding: "80px 24px", background: "var(--bg)", textAlign: "center" }}>
         <div style={{ maxWidth: 520, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(26px, 3vw, 36px)", fontWeight: 700, letterSpacing: "-0.02em", marginBottom: 16 }}>
-            Start with a $750 Pipeline Audit
+            Not sure where to start?
           </h2>
           <p style={{ fontSize: 16, color: "var(--text-muted)", lineHeight: 1.7, marginBottom: 36 }}>
-            A full diagnostic of your current outbound infrastructure, ICP fit, and data quality — before any retainer commitment.
+            One conversation is enough to know whether what we build is the right fit for your pipeline.
           </p>
           <Link href="/contact" className="btn-coral" style={{ padding: "16px 36px", borderRadius: 8, fontSize: 16, fontWeight: 600 }}>
             Book a Strategy Call

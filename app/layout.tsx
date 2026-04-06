@@ -32,6 +32,38 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Minier MarTech",
+  "url": "https://miniermartech.com",
+  "description": "Outbound pipeline infrastructure for M&A advisors, business brokers, and PE deal teams. ICP design, cohort architecture, sequence validation, and data intelligence that compounds over time.",
+  "founder": {
+    "@type": "Person",
+    "name": "Kenneth Minier",
+    "jobTitle": "Founder & Operator",
+    "description": "Operator background in NFL/professional sports operations. Builds systematic outbound origination infrastructure for lower-middle market deal flow.",
+    "sameAs": ["https://www.linkedin.com/in/kennethminier"]
+  },
+  "areaServed": "United States",
+  "serviceType": [
+    "Outbound Pipeline Infrastructure",
+    "ICP Design and Cohort Architecture",
+    "Sequence Design and Campaign Operations",
+    "Data Intelligence and Predictive Scoring"
+  ],
+  "knowsAbout": [
+    "M&A deal origination",
+    "business broker outreach",
+    "PE deal flow",
+    "outbound sales infrastructure",
+    "lower-middle market M&A"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/company/minier-martech"
+  ]
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -39,6 +71,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body>
         <Nav />
         <main>{children}</main>

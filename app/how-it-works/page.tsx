@@ -6,6 +6,53 @@ export const metadata: Metadata = {
   description: "The five-stage process: ICP design, pre-flight validation, campaign execution, monthly optimization, and intelligence compounding.",
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does Minier MarTech build outbound pipeline for M&A advisors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minier MarTech designs outbound origination systems for M&A advisors in five stages: ICP research and cohort architecture, pre-flight contact simulation, campaign execution with live signal capture, monthly optimization, and ongoing data intelligence. Every contact record and behavioral signal is retained by the client — not locked in a platform."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Minier MarTech and a typical outbound marketing agency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unlike typical agencies that send generic templates to bulk lists, Minier MarTech models each contact cohort before launch using a pre-flight simulation. Sequences are tuned to specific buyer psychology. All data — contact records, response signals, enrichment accuracy — stays with the client. The system compounds value with every batch rather than resetting each month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What results can M&A deal teams expect from outbound pipeline infrastructure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Active Minier MarTech campaigns have achieved a 17%+ reply rate and 12.6% acceptance rate — compared to a typical cold outbound acceptance rate of 3–5%. At the Scale tier, campaigns reach approximately 480 contacts per month and generate 12–24 qualified meetings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do business brokers use outbound infrastructure to find sellers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IBBA/CBI-credentialed business brokers use Minier MarTech to build proactive seller identification pipelines. Instead of waiting on referrals, brokers get a systematic ICP-mapped outreach system targeting business owners in the $500K–$10M deal range by industry, geography, and succession readiness signals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the entry point to work with Minier MarTech?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The entry point is a $750 Pipeline Audit — a diagnostic of your current outbound infrastructure, ICP fit, and data quality. It produces a written assessment and recommendations before any retainer commitment."
+      }
+    }
+  ]
+};
+
 const stages = [
   {
     num: "01",
@@ -79,6 +126,10 @@ const faqs = [
 export default function HowItWorksPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Header */}
       <section style={{ padding: "100px 24px 60px", textAlign: "center", borderBottom: "1px solid var(--border)" }}>
         <div style={{ maxWidth: 600, margin: "0 auto" }}>

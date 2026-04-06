@@ -1,9 +1,31 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About — Minier MarTech",
   description: "Kenneth Minier. Operator background. NFL/Cowboys operations. Built Minier MarTech because the industry's outreach problem is an infrastructure problem.",
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kenneth Minier",
+  "jobTitle": "Founder & Operator",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Minier MarTech",
+    "url": "https://miniermartech.com"
+  },
+  "description": "Operator with NFL/professional sports operations background. Builds systematic outbound origination infrastructure for M&A advisors, business brokers, and PE deal teams sourcing lower-middle market deal flow.",
+  "knowsAbout": [
+    "Outbound pipeline infrastructure",
+    "ICP design and cohort architecture",
+    "Sequence design and campaign operations",
+    "M&A deal origination",
+    "Data intelligence and behavioral modeling"
+  ],
+  "sameAs": ["https://www.linkedin.com/in/kennethminier"]
 };
 
 const convictions = [
@@ -27,34 +49,28 @@ const convictions = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <section style={{ padding: "100px 24px 60px", borderBottom: "1px solid var(--border)" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 80, alignItems: "center" }}>
             <div>
               <div style={{
-                background: "var(--bg-card)",
-                border: "1px solid var(--border)",
                 borderRadius: 16,
-                aspectRatio: "4/5",
                 maxWidth: 400,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
                 overflow: "hidden",
                 position: "relative",
+                aspectRatio: "4/5",
               }}>
-                <div style={{
-                  position: "absolute", inset: 0,
-                  background: "linear-gradient(135deg, #1a2e4a 0%, #2C5F8A 50%, #0d1520 100%)",
-                  opacity: 0.8,
-                }} />
-                <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: 24 }}>
-                  <div style={{ fontSize: 48, marginBottom: 12 }}>👤</div>
-                  <div style={{ fontSize: 14, color: "var(--text-muted)", fontStyle: "italic" }}>
-                    Operator energy, not corporate.
-                  </div>
-                </div>
+                <Image
+                  src="/ken.jpg"
+                  alt="Kenneth Minier"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center top" }}
+                  priority
+                />
               </div>
             </div>
 
