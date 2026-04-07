@@ -35,24 +35,24 @@ export default function Nav() {
         backdropFilter: "blur(12px)",
         borderBottom: scrolled ? "1px solid rgba(248, 247, 244, 0.08)" : "1px solid transparent",
         transition: "all 0.3s ease",
-        padding: scrolled ? "6px 0" : "10px 0",
-        marginBottom: "-4px",
+        padding: scrolled ? "2px 0" : "3px 0",
+        marginBottom: "-8px",
         boxShadow: scrolled ? "0 4px 24px rgba(0,0,0,0.3)" : "none",
       }}
     >
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", alignItems: "center" }}>
         {/* Row 1: Logo (centered) */}
-        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 16, paddingBottom: 4 }}>
+        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 16, paddingBottom: 0 }}>
           <img
             src="/favicon.png"
             alt="Minier MarTech"
             style={{ height: 65, width: 65, objectFit: "contain", flexShrink: 0 }}
           />
           <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.1 }}>
-            <span style={{ fontFamily: "var(--font-fraunces)", fontSize: 22, fontWeight: 700, color: "var(--text)", letterSpacing: "-0.02em" }}>
+            <span style={{ fontFamily: "var(--font-fraunces)", fontSize: 25, fontWeight: 700, color: "var(--text)", letterSpacing: "-0.02em" }}>
               Minier MarTech
             </span>
-            <span style={{ fontSize: 12, color: "var(--text-muted)", letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 3 }}>
+            <span style={{ fontSize: 15, color: "var(--text-muted)", letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 3 }}>
               Outbound Infrastructure
             </span>
           </div>
