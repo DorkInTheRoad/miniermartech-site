@@ -22,10 +22,6 @@ export const metadata: Metadata = {
   description:
     "Data-verified outbound pipeline infrastructure for M&A advisors, business brokers, and PE deal teams. ICP design, sequence architecture, and campaign operations that compound over time.",
   metadataBase: new URL("https://miniermartech.com"),
-  icons: {
-    icon: [{ url: "/favicon.png", type: "image/png", sizes: "any" }],
-    apple: "/favicon.png",
-  },
   openGraph: {
     title: "Minier MarTech — Outbound Pipeline for Deal-Driven Operators",
     description:
@@ -76,8 +72,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.png" type="image/png" sizes="any" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
