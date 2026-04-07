@@ -321,7 +321,7 @@ export default function ServicesPage() {
                 ))}
               </ul>
               <Link href="/contact" className="btn-coral" style={{ padding: "13px 28px", borderRadius: 8, fontSize: 14, fontWeight: 600, display: "inline-block" }}>
-                Book a Strategy Call
+                Start a Conversation
               </Link>
             </div>
 
@@ -361,7 +361,7 @@ export default function ServicesPage() {
             One conversation is enough to know whether what we build is the right fit for your pipeline.
           </p>
           <Link href="/contact" className="btn-coral" style={{ padding: "16px 36px", borderRadius: 8, fontSize: 16, fontWeight: 600 }}>
-            Book a Strategy Call
+            Start a Conversation
           </Link>
         </div>
       </section>
