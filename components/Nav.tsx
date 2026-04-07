@@ -35,7 +35,7 @@ export default function Nav() {
         backdropFilter: "blur(12px)",
         borderBottom: scrolled ? "1px solid rgba(248, 247, 244, 0.08)" : "1px solid transparent",
         transition: "all 0.3s ease",
-        padding: scrolled ? "12px 0" : "18px 0",
+        padding: scrolled ? "8px 0" : "12px 0",
         boxShadow: scrolled ? "0 4px 24px rgba(0,0,0,0.3)" : "none",
       }}
     >
