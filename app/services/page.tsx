@@ -53,9 +53,9 @@ const phases = [
     color: "var(--accent-blue)",
     desc: "The foundational layer. ICP design, cohort architecture, data hygiene, and sequence execution — built and operated end-to-end.",
     tiers: [
-      { name: "LinkedIn Foundation", price: "$1,500/mo", contacts: "~160 contacts", responses: "~20–28", meetings: "4–8" },
-      { name: "Multi-Channel", price: "$2,500/mo", contacts: "~320 contacts", responses: "~40–56", meetings: "8–16" },
-      { name: "Scale", price: "$3,500/mo", contacts: "~480 contacts", responses: "~60–84", meetings: "12–24" },
+      { name: "LinkedIn Foundation", price: "$1,500/mo", contacts: "~700 contacts", responses: "~30–40", meetings: "8–12" },
+      { name: "Multi-Channel", price: "$2,500/mo", contacts: "~2,500 contacts", responses: "~100–140", meetings: "18–28" },
+      { name: "Scale", price: "$3,500/mo", contacts: "~5,000 contacts", responses: "~200–280", meetings: "35–55" },
     ],
   },
   {

@@ -99,7 +99,7 @@ const stages = [
 const faqs = [
   {
     q: "How many contacts do you reach per month?",
-    a: "Volume is governed by two things: your tier and LinkedIn's platform limits. LinkedIn caps weekly connection requests — standard profiles sit around 100–200 per week, Sales Navigator profiles can reach higher, but the ceiling is real and enforced. We operate well inside those limits intentionally. Pushing volume to the edge risks account restrictions and tanks your sender reputation. Our tiers are calibrated around sustainable weekly cadences: Foundation (~160/mo), Multi-Channel (~320/mo), Scale (~480/mo). Every contact still has to clear ICP validation before entering the pipeline — volume without precision is just noise.",
+    a: "Volume is governed by two things: your tier and the platform limits we respect. LinkedIn caps weekly connection requests — Sales Navigator profiles run around 200/week, and we operate below that ceiling intentionally. Pushing to the edge risks account restrictions and damages sender reputation. Email volume is governed by inbox and domain warm-up limits — typically 30–50 sends per inbox per day on dedicated sending domains. Our tiers are built around those constraints: Foundation (LinkedIn only, ~700 contacts/mo), Multi-Channel (LinkedIn + email, ~2,500/mo), Scale (full multi-channel at max sustainable volume, ~5,000/mo). Every contact still has to clear ICP validation before entering the pipeline — volume without precision is just noise.",
   },
   {
     q: "What does 'data hygiene' actually mean in practice?",
