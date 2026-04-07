@@ -43,11 +43,13 @@ export default function Nav() {
         {/* Logo */}
         <Link href="/" style={{ textDecoration: "none" }}>
           <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-            <img
-              src="/icon.png"
-              alt="Minier MarTech Logo Icon"
-              style={{ height: 50, width: 50, objectFit: "contain", flexShrink: 0, marginTop: 0 }}
-            />
+            <div style={{ height: 50, width: 50, overflow: "hidden", flexShrink: 0 }}>
+              <img
+                src="/logo.png"
+                alt="Minier MarTech Logo Icon"
+                style={{ height: 50, width: "auto", objectFit: "contain", objectPosition: "left" }}
+              />
+            </div>
             <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
               <span style={{ fontFamily: "var(--font-fraunces)", fontSize: 18, fontWeight: 700, color: "var(--text)", letterSpacing: "-0.02em" }}>
                 Minier MarTech
