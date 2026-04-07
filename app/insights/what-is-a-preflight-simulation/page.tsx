@@ -6,9 +6,33 @@ export const metadata: Metadata = {
   description: "Before any contact group enters our pipeline, it runs through a simulation layer. Here's exactly what that means, why we do it, and how it changes campaign outcomes for M&A advisors and business brokers.",
 };
 
-const faqSchema = {
+const combinedSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "What Is a Pre-Flight Simulation?",
+      "description": "How Minier MarTech validates every contact cohort before launch using AI persona simulation",
+      "author": {
+        "@type": "Person",
+        "name": "Kenneth Minier",
+        "url": "https://www.linkedin.com/in/kennethminier"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Minier MarTech",
+        "url": "https://miniermartech.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://miniermartech.com/favicon.png"
+        }
+      },
+      "datePublished": "2026-04-05",
+      "dateModified": "2026-04-05",
+      "image": "https://miniermartech.com/favicon.png",
+    },
+    {
+      "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
@@ -42,7 +66,9 @@ const faqSchema = {
         "text": "Cohort architecture is the process of segmenting a contact list into groups with meaningfully similar psychology, deal readiness, and response patterns — and building distinct sequences for each. Instead of sending one sequence to all contacts, cohort architecture ensures that a boutique M&A advisor, an IBBA-credentialed broker, and a PE BD director each receive a sequence designed around their specific motivations and objections. Pre-flight simulation validates each cohort before it goes live.",
       },
     },
-  ],
+      ]
+    }
+  ]
 };
 
 export default function ArticlePage() {
@@ -50,7 +76,7 @@ export default function ArticlePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }}
       />
 
       {/* Header */}

@@ -6,9 +6,33 @@ export const metadata: Metadata = {
   description: "The advisors winning proprietary lower-middle market deal flow aren't pitching better. They have a data layer that compounds with every campaign. Here's what that means and how to build it.",
 };
 
-const faqSchema = {
+const combinedSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Why M&A Advisors Lose Deal Flow to Operators with Better Data",
+      "description": "How data compounding separates systematic deal origination from one-time campaign spend",
+      "author": {
+        "@type": "Person",
+        "name": "Kenneth Minier",
+        "url": "https://www.linkedin.com/in/kennethminier"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Minier MarTech",
+        "url": "https://miniermartech.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://miniermartech.com/favicon.png"
+        }
+      },
+      "datePublished": "2026-04-05",
+      "dateModified": "2026-04-05",
+      "image": "https://miniermartech.com/favicon.png",
+    },
+    {
+      "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
@@ -42,7 +66,9 @@ const faqSchema = {
         "text": "Well-built outbound infrastructure targeting the correct M&A advisor ICP produces 17%+ reply rates and 12.6% acceptance rates for meeting requests. This compares to a 3–5% industry baseline for generic cold outreach. The improvement comes from ICP precision, cohort-specific sequencing, pre-launch validation, and progressive data enrichment — not higher volume.",
       },
     },
-  ],
+      ]
+    }
+  ]
 };
 
 export default function ArticlePage() {
@@ -50,7 +76,7 @@ export default function ArticlePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }}
       />
 
       {/* Header */}

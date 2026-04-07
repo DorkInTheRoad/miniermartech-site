@@ -6,10 +6,34 @@ export const metadata: Metadata = {
   description: "Most deal teams blame the channel when campaigns underperform. The problem isn't cold outreach — it's the absence of infrastructure behind it. Here's what that actually means.",
 };
 
-const faqSchema = {
+const combinedSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Cold Outreach Isn't Broken. Your Infrastructure Is.",
+      "description": "Why outbound campaigns fail and what infrastructure actually means — ICP design, cohort architecture, signal capture",
+      "author": {
+        "@type": "Person",
+        "name": "Kenneth Minier",
+        "url": "https://www.linkedin.com/in/kennethminier"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Minier MarTech",
+        "url": "https://miniermartech.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://miniermartech.com/favicon.png"
+        }
+      },
+      "datePublished": "2026-04-05",
+      "dateModified": "2026-04-05",
+      "image": "https://miniermartech.com/favicon.png",
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
     {
       "@type": "Question",
       "name": "Why does cold outreach fail for M&A advisors and business brokers?",
@@ -42,7 +66,9 @@ const faqSchema = {
         "text": "ICP (Ideal Contact Profile) design is the process of defining exactly who your outbound should target — industry, geography, company size, deal readiness signals, and psychological profile. For deal origination, a precise ICP means every outreach dollar reaches someone with a real probability of being a seller, source, or counterpart. Without ICP design, outbound is random and produces random results.",
       },
     },
-  ],
+      ]
+    }
+  ]
 };
 
 export default function ArticlePage() {
@@ -50,7 +76,7 @@ export default function ArticlePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }}
       />
 
       {/* Header */}

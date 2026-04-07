@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Services — Minier MarTech",
-  description: "From infrastructure to intelligence to custom AI engineering. Three-phase service model for M&A advisors, business brokers, and PE deal teams.",
+  description: "Outbound pipeline design, contact scoring, and custom AI engineering. Three-phase service model: Design & Execution, Data Intelligence, The AI Moat. Built for M&A advisors, business brokers, and PE deal teams.",
 };
 
 const servicesSchema = {
@@ -40,6 +40,20 @@ const servicesSchema = {
         "@type": "Offer",
         "price": "750",
         "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Engine Optimization",
+      "provider": { "@type": "Organization", "name": "Minier MarTech", "url": "https://miniermartech.com" },
+      "description": "Predictive contact scoring, cohort ranking, and market intelligence built on behavioral campaign data. Turn signal into a proprietary asset that improves with every batch.",
+      "areaServed": "United States",
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "750",
+        "highPrice": "2500",
+        "priceCurrency": "USD",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "unitText": "month" }
       }
     }
   ]
