@@ -39,9 +39,9 @@ export default function Nav() {
         boxShadow: scrolled ? "0 4px 24px rgba(0,0,0,0.3)" : "none",
       }}
     >
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        {/* Logo */}
-        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 14 }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        {/* Row 1: Logo (centered) */}
+        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 14, paddingBottom: 16 }}>
           <img
             src="/favicon.png"
             alt="Minier MarTech"
@@ -57,8 +57,8 @@ export default function Nav() {
           </div>
         </Link>
 
-        {/* Desktop Links */}
-        <div style={{ display: "flex", alignItems: "center", gap: 32 }} className="desktop-nav">
+        {/* Row 2: Desktop Links (centered) */}
+        <div style={{ display: "flex", alignItems: "center", gap: 32, width: "100%", justifyContent: "center" }} className="desktop-nav">
           {links.map((link) => (
             <Link
               key={link.href}
