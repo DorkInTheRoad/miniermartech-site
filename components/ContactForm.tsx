@@ -13,9 +13,10 @@ const needOptions = [
 ];
 
 const bizTypes = [
-  "M&A Advisory",
-  "Business Brokerage",
   "PE / Family Office",
+  "M&A Advisory",
+  "RIA / Wealth Management",
+  "Business Brokerage",
   "FinTech / AI Platform",
   "Other",
 ];
