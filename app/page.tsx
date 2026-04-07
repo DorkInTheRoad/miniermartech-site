@@ -174,7 +174,7 @@ export default function Home() {
             Ready to build predictable pipeline?
           </h2>
           <p style={{ fontSize: 17, color: "var(--text-muted)", marginBottom: 40, lineHeight: 1.6 }}>
-            One conversation to scope your ICP, audit your current outreach, and map out what a consistent pipeline looks like for your business.
+            One conversation to scope your ICP, audit your current outreach, and map out what a stable pipeline looks like for your business.
           </p>
           <Link href="/contact" className="btn-coral" style={{
             padding: "18px 40px", borderRadius: 8, fontSize: 17, fontWeight: 600,
