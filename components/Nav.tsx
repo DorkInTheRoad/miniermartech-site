@@ -41,23 +41,19 @@ export default function Nav() {
     >
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: "none" }}>
-          <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-            <div style={{ height: 50, width: 50, overflow: "hidden", flexShrink: 0 }}>
-              <img
-                src="/logo.png"
-                alt="Minier MarTech Logo Icon"
-                style={{ height: 50, width: "auto", objectFit: "contain", objectPosition: "left" }}
-              />
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
-              <span style={{ fontFamily: "var(--font-fraunces)", fontSize: 18, fontWeight: 700, color: "var(--text)", letterSpacing: "-0.02em" }}>
-                Minier MarTech
-              </span>
-              <span style={{ fontSize: 11, color: "var(--text-muted)", letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 2 }}>
-                Outbound Infrastructure
-              </span>
-            </div>
+        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 10 }}>
+          <img
+            src="/favicon.png"
+            alt="Minier MarTech"
+            style={{ height: 45, width: 45, objectFit: "contain" }}
+          />
+          <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
+            <span style={{ fontFamily: "var(--font-fraunces)", fontSize: 20, fontWeight: 700, color: "var(--text)", letterSpacing: "-0.02em" }}>
+              Minier MarTech
+            </span>
+            <span style={{ fontSize: 11, color: "var(--text-muted)", letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 2 }}>
+              Outbound Infrastructure
+            </span>
           </div>
         </Link>
 
