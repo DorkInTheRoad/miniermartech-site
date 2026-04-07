@@ -24,7 +24,7 @@ export default function Home() {
           pointerEvents: "none",
         }} />
 
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "64px 24px 80px", width: "100%", position: "relative", zIndex: 1 }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "69px 24px 80px", width: "100%", position: "relative", zIndex: 1 }}>
           <div style={{ maxWidth: 760 }}>
             <div style={{
               display: "inline-flex", alignItems: "center", gap: 8,
