@@ -49,17 +49,17 @@ export default function Nav() {
             style={{ height: 65, width: 65, objectFit: "contain", flexShrink: 0 }}
           />
           <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.1 }}>
-            <span style={{ fontFamily: "var(--font-fraunces)", fontSize: 25, fontWeight: 700, color: "var(--text)", letterSpacing: "-0.02em" }}>
+            <span style={{ fontFamily: "var(--font-fraunces)", fontSize: 23, fontWeight: 700, color: "var(--text)", letterSpacing: "-0.02em" }}>
               Minier MarTech
             </span>
-            <span style={{ fontSize: 15, color: "var(--text-muted)", letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 3 }}>
+            <span style={{ fontSize: 13, color: "var(--text-muted)", letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 3 }}>
               Outbound Infrastructure
             </span>
           </div>
         </Link>
 
         {/* Row 2: Desktop Links (centered) */}
-        <div style={{ display: "flex", alignItems: "center", gap: 32, width: "100%", justifyContent: "center" }} className="desktop-nav">
+        <div style={{ display: "flex", alignItems: "center", gap: 32, width: "100%", justifyContent: "center", marginTop: -12, paddingTop: 8 }} className="desktop-nav">
           {links.map((link) => (
             <Link
               key={link.href}
