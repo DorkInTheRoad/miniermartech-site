@@ -103,7 +103,7 @@ const faqs = [
   },
   {
     q: "What does 'data hygiene' actually mean in practice?",
-    a: "Before any contact enters a campaign, we run a validation pass — checking for invalid emails, stale titles, duplicate entries, and enrichment accuracy. The Chad/OurCFO audit we ran found 24% bad data across 12,181 contacts from a leading vendor. That's the problem we're solving. Bad data doesn't just waste spend — it damages your sender reputation.",
+    a: "Before any contact enters a campaign, we run a validation pass — checking for invalid emails, stale titles, duplicate entries, and enrichment accuracy. A recent client audit found 24% bad data across 12,181 contacts from a leading vendor. That's the problem we're solving. Bad data doesn't just waste spend — it damages your sender reputation.",
   },
   {
     q: "Do I need to have existing outbound infrastructure?",
