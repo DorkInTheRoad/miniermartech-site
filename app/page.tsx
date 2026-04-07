@@ -24,7 +24,7 @@ export default function Home() {
           pointerEvents: "none",
         }} />
 
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "120px 24px 80px", width: "100%", position: "relative", zIndex: 1 }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "24px 24px 80px", width: "100%", position: "relative", zIndex: 1 }}>
           <div style={{ maxWidth: 760 }}>
             <div style={{
               display: "inline-flex", alignItems: "center", gap: 8,
@@ -64,7 +64,7 @@ export default function Home() {
               <Link href="/contact" className="btn-coral" style={{
                 padding: "16px 32px", borderRadius: 8, fontSize: 16, fontWeight: 600,
               }}>
-                Book a Strategy Call
+                Schedule a Strategy Call
               </Link>
               <Link href="/how-it-works" className="link-arrow">
                 See How It Works <span style={{ fontSize: 18 }}>→</span>
