@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const links = [
@@ -42,13 +41,11 @@ export default function Nav() {
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         {/* Logo */}
         <Link href="/" style={{ textDecoration: "none" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <Image
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <img
               src="/logo.png"
               alt="Minier MarTech Logo"
-              width={60}
-              height={60}
-              style={{ objectFit: "contain" }}
+              style={{ height: 50, width: "auto", objectFit: "contain" }}
             />
             <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
               <span style={{ fontFamily: "var(--font-fraunces)", fontSize: 20, fontWeight: 700, color: "var(--text)", letterSpacing: "-0.02em" }}>
