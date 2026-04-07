@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "Data-verified outbound pipeline infrastructure for M&A advisors, business brokers, and PE deal teams. ICP design, sequence architecture, and campaign operations that compound over time.",
   metadataBase: new URL("https://miniermartech.com"),
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
     apple: "/favicon.png",
   },
   openGraph: {
