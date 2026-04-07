@@ -17,6 +17,7 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  // Logo is loaded from /public/logo.png
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20);
