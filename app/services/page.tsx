@@ -13,7 +13,7 @@ const servicesSchema = {
       "@type": "Service",
       "serviceType": "Outbound Pipeline Design & Execution",
       "provider": { "@type": "Organization", "name": "Minier MarTech", "url": "https://miniermartech.com" },
-      "description": "ICP design, cohort architecture, data hygiene, and sequence execution for M&A advisors, business brokers, and PE deal teams. Campaigns reach 160–480 contacts per month with 12–24 qualified meetings at the Scale tier.",
+      "description": "ICP design, cohort architecture, data hygiene, and sequence execution for M&A advisors, business brokers, and PE deal teams. LinkedIn-led campaigns reach 700–5,000 contacts per month depending on tier, producing a 17%+ reply rate and 12.6% acceptance rate for meeting requests.",
       "areaServed": "United States",
       "offers": {
         "@type": "AggregateOffer",

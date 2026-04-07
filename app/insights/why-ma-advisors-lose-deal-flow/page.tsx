@@ -127,11 +127,11 @@ export default function ArticlePage() {
             </h2>
 
             <p>
-              In active campaigns, the difference between a data-backed system and a generic outreach operation shows up in the numbers. Well-built infrastructure produces a 17%+ reply rate and 12.6% acceptance rate for meeting requests. The industry baseline for cold outbound is 3–5% acceptance.
+              In active campaigns, the difference between a data-backed system and a generic outreach operation shows up in the numbers. Well-built LinkedIn infrastructure produces a 17%+ reply rate and 12.6% connection acceptance rate. The industry baseline for cold LinkedIn outbound is 3–5% acceptance.
             </p>
 
             <p>
-              That's not a marginal improvement. At the Scale tier — roughly 480 contacts per month — the difference between 5% and 12.6% acceptance is the difference between 24 qualified meetings and 60. For an advisor with a success-fee model, where deal origination is the binding constraint, that gap is the business.
+              That's not a marginal improvement. At the Foundation tier — roughly 700 LinkedIn contacts per month — the difference between 5% and 12.6% acceptance is the difference between 35 qualified meetings and 88. For an advisor with a success-fee model, where deal origination is the binding constraint, that gap is the business.
             </p>
 
             <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text)", marginTop: 16 }}>

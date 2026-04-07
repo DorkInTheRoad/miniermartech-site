@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 
 const metrics = [
   { value: 100, suffix: "+", label: "Meetings Booked" },
-  { value: 12.6, suffix: "%", label: "Acceptance Rate", decimal: true },
-  { value: 17, suffix: "%+", label: "Avg Reply Rate" },
+  { value: 12.6, suffix: "%", label: "LinkedIn Acceptance Rate", decimal: true },
+  { value: 17, suffix: "%+", label: "LinkedIn Reply Rate" },
   { value: 120000, suffix: "+", label: "Contacts Audited", format: true },
 ];
 

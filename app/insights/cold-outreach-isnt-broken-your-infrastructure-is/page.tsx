@@ -84,7 +84,7 @@ export default function ArticlePage() {
             </p>
 
             <p>
-              Cold outreach produces a 17%+ reply rate when built correctly. It produces 3–5% when built like most agencies build it. That gap doesn't come from the channel. It comes from infrastructure.
+              LinkedIn outreach produces a 17%+ reply rate when built correctly. It produces 3–5% when built like most agencies build it. That gap doesn't come from the channel. It comes from infrastructure.
             </p>
 
             <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text)", marginTop: 16 }}>
@@ -132,7 +132,7 @@ export default function ArticlePage() {
             </p>
 
             <p>
-              The difference in outcome is measurable. Our active campaigns produce a 12.6% acceptance rate and 17%+ reply rate — compared to a typical industry baseline of 3–5% acceptance. That gap is infrastructure, not luck.
+              The difference in outcome is measurable. Our active LinkedIn campaigns produce a 12.6% connection acceptance rate and 17%+ reply rate — compared to a typical industry baseline of 3–5% acceptance. That gap is infrastructure, not luck.
             </p>
 
             <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text)", marginTop: 16 }}>

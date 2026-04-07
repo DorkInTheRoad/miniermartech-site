@@ -31,7 +31,7 @@ const faqSchema = {
       "name": "What results can M&A deal teams expect from outbound pipeline infrastructure?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Active Minier MarTech campaigns have achieved a 17%+ reply rate and 12.6% acceptance rate — compared to a typical cold outbound acceptance rate of 3–5%. At the Scale tier, campaigns reach approximately 480 contacts per month and generate 12–24 qualified meetings."
+        "text": "Active Minier MarTech campaigns have achieved a 17%+ reply rate and 12.6% acceptance rate on LinkedIn — compared to a typical cold outbound acceptance rate of 3–5%. At the Scale tier, campaigns reach approximately 5,000 contacts per month."
       }
     },
     {
