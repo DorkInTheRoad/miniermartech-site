@@ -44,9 +44,9 @@ export default function Nav() {
         <Link href="/" style={{ textDecoration: "none" }}>
           <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
             <img
-              src="/logo.png"
+              src="/icon.png"
               alt="Minier MarTech Logo Icon"
-              style={{ height: 60, width: 60, objectFit: "contain", flexShrink: 0, marginTop: 0 }}
+              style={{ height: 50, width: 50, objectFit: "contain", flexShrink: 0, marginTop: 0 }}
             />
             <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
               <span style={{ fontFamily: "var(--font-fraunces)", fontSize: 18, fontWeight: 700, color: "var(--text)", letterSpacing: "-0.02em" }}>
