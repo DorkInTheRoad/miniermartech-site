@@ -41,12 +41,7 @@ export default function Nav() {
     >
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 10 }}>
-          <img
-            src="/favicon.png"
-            alt="Minier MarTech"
-            style={{ height: 45, width: 45, objectFit: "contain" }}
-          />
+        <Link href="/" style={{ textDecoration: "none" }}>
           <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
             <span style={{ fontFamily: "var(--font-fraunces)", fontSize: 20, fontWeight: 700, color: "var(--text)", letterSpacing: "-0.02em" }}>
               Minier MarTech
