@@ -36,7 +36,7 @@ export default function Nav() {
         borderBottom: scrolled ? "1px solid rgba(248, 247, 244, 0.08)" : "1px solid transparent",
         transition: "all 0.3s ease",
         padding: scrolled ? "2px 0" : "3px 0",
-        marginBottom: "-8px",
+        marginBottom: "-32px",
         boxShadow: scrolled ? "0 4px 24px rgba(0,0,0,0.3)" : "none",
       }}
     >
