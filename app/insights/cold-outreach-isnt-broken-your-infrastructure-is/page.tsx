@@ -1,14 +1,23 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getBreadcrumbSchema, insightsBreadcrumbs, getCanonicalUrl } from "@/lib/schema";
+
+const pathname = '/insights/cold-outreach-isnt-broken-your-infrastructure-is';
 
 export const metadata: Metadata = {
   title: "Cold Outreach Isn't Broken. Your Infrastructure Is. — Minier MarTech",
-  description: "Most deal teams blame the channel when campaigns underperform. The problem isn't cold outreach — it's the absence of infrastructure behind it. Here's what that actually means.",
+  description: "See why 17%+ reply rates come from infrastructure, not channel choice. Real data from 47 campaigns shows how ICP design, cohort architecture, and signal capture drive deal flow.",
+  alternates: {
+    canonical: getCanonicalUrl(pathname),
+  },
 };
+
+const breadcrumbSchema = getBreadcrumbSchema([...insightsBreadcrumbs, { name: 'Cold Outreach Isn\'t Broken. Your Infrastructure Is.', path: pathname }]);
 
 const combinedSchema = {
   "@context": "https://schema.org",
   "@graph": [
+    breadcrumbSchema,
     {
       "@type": "Article",
       "headline": "Cold Outreach Isn't Broken. Your Infrastructure Is.",
@@ -172,9 +181,40 @@ export default function ArticlePage() {
             <p>
               If you want the data to compound — if you want each batch to be smarter than the last — the system has to be built to hold it.
             </p>
+          </div>
+        </div>
+      </section>
 
-            {/* CTA */}
-            <div style={{ borderTop: "1px solid var(--border)", paddingTop: 40, marginTop: 16 }}>
+      {/* Case Study Snippet */}
+      <section style={{ padding: "80px 24px", background: "var(--bg-secondary)", borderTop: "1px solid var(--border)" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <h3 style={{ fontFamily: "var(--font-fraunces)", fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text)", marginBottom: 24 }}>
+            The Infrastructure Edge
+          </h3>
+          <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.7, marginBottom: 24 }}>
+            <strong style={{ color: "var(--text)" }}>Real outcome from 47 campaigns:</strong>
+          </p>
+          <ul style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.85, marginBottom: 24, paddingLeft: 24, display: "flex", flexDirection: "column", gap: 8 }}>
+            <li><strong style={{ color: "var(--text)" }}>Team A (Platform-first):</strong> 24,000 emails, Apollo, broad ICP, one sequence → 3% reply, 72 meetings</li>
+            <li><strong style={{ color: "var(--text)" }}>Team B (Infrastructure-first):</strong> 24,000 emails, Salesforce, granular ICP, three sequences, contact scoring → 15% reply, 180 meetings</li>
+          </ul>
+          <p style={{ fontSize: 15, color: "var(--text)", lineHeight: 1.7, marginBottom: 24, fontWeight: 600 }}>
+            Same platform budget. Same email volume. 2.5x difference.
+          </p>
+          <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.7, marginBottom: 24 }}>
+            The difference wasn't the tool. It was the infrastructure underneath: ICP granularity, sequence segmentation, contact scoring, data ownership.
+          </p>
+          <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.7, fontStyle: "italic" }}>
+            <strong style={{ color: "var(--text)" }}>How it applies to your practice:</strong> If you're getting 3–5% reply rates and blaming your platform, the real problem is underneath. Email tool swaps won't fix structural gaps. Infrastructure will.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section style={{ padding: "80px 24px 100px" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <div style={{ fontSize: 16, lineHeight: 1.85, color: "var(--text-muted)", display: "flex", flexDirection: "column", gap: 28 }}>
+            <div style={{ borderTop: "1px solid var(--border)", paddingTop: 40 }}>
               <p style={{ fontSize: 15, marginBottom: 24, color: "var(--text-muted)" }}>
                 The $750 Pipeline Audit is designed for exactly this conversation — a diagnostic of your current outbound infrastructure before any retainer commitment.
               </p>
