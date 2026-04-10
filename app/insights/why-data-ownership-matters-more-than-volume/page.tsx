@@ -187,7 +187,7 @@ export default function ArticlePage() {
           You spent 12 months generating proprietary intelligence about your ICP, and you don't actually own it.
         </p>
 
-        <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, fontWeight: 700, marginbottom: 24, marginTop: 48 }}>What Smart Operators Do</h2>
+        <h2 style={{ fontFamily: "var(--font-fraunces)", fontSize: 28, fontWeight: 700, marginBottom: 24, marginTop: 48 }}>What Smart Operators Do</h2>
         <p style={{ fontSize: 16, color: "var(--text-muted)", lineHeight: 1.8, marginBottom: 48 }}>
           Smart operators build their outbound infrastructure like they own it — because they do. They structure contact data. They tag replies by cohort and sentiment. They track which sequence touches drove responses. They model objection patterns. They own every behavioral signal from every campaign.
         </p>
