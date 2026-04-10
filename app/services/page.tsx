@@ -276,72 +276,86 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            <div style={{ overflowX: "auto" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
-                <thead>
-                  <tr
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: 24,
+              }}
+            >
+              {phase.tiers.map((tier) => (
+                <div
+                  key={tier.name}
+                  style={{
+                    background: "var(--bg-card)",
+                    border: "1px solid var(--border)",
+                    borderTop: `3px solid ${phase.color}`,
+                    borderRadius: 12,
+                    padding: "36px 28px",
+                    transition: "all 0.2s ease",
+                    cursor: "pointer",
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.transform = "translateY(-3px)";
+                    e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.4)";
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                >
+                  <h3
                     style={{
-                      background: phase.color + "22",
-                      borderBottom: `2px solid ${phase.color}`,
+                      fontFamily: "var(--font-fraunces)",
+                      fontSize: 22,
+                      fontWeight: 700,
+                      marginBottom: 12,
+                      color: "var(--text)",
+                      lineHeight: 1.2,
                     }}
                   >
-                    <th
-                      style={{
-                        textAlign: "left",
-                        padding: "14px 20px",
-                        color: "var(--text)",
-                        fontWeight: 600,
-                        whiteSpace: "nowrap" as const,
-                      }}
-                    >
-                      Tier
-                    </th>
-                    <th
-                      style={{
-                        textAlign: "left",
-                        padding: "14px 20px",
-                        color: "var(--text)",
-                        fontWeight: 600,
-                        whiteSpace: "nowrap" as const,
-                      }}
-                    >
-                      Monthly Cost
-                    </th>
-                    <th
-                      style={{
-                        textAlign: "left",
-                        padding: "14px 20px",
-                        color: "var(--text)",
-                        fontWeight: 600,
-                        whiteSpace: "nowrap" as const,
-                      }}
-                    >
-                      Contacts Reached
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {phase.tiers.map((tier, j) => (
-                    <tr
-                      key={tier.name}
-                      style={{
-                        background: j % 2 === 0 ? "var(--bg-card)" : "transparent",
-                        borderBottom: "1px solid var(--border)",
-                      }}
-                    >
-                      <td style={{ padding: "14px 20px", fontWeight: 600, color: "var(--text)" }}>
-                        {tier.name}
-                      </td>
-                      <td style={{ padding: "14px 20px", color: phase.color, fontWeight: 600 }}>
-                        {tier.price}
-                      </td>
-                      <td style={{ padding: "14px 20px", color: "var(--text-muted)" }}>
+                    {tier.name}
+                  </h3>
+
+                  <div
+                    style={{
+                      fontSize: 24,
+                      fontWeight: 700,
+                      color: phase.color,
+                      marginBottom: 28,
+                      fontFamily: "var(--font-fraunces)",
+                    }}
+                  >
+                    {tier.price}
+                  </div>
+
+                  <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                    <div>
+                      <div
+                        style={{
+                          fontSize: 11,
+                          fontWeight: 600,
+                          textTransform: "uppercase",
+                          letterSpacing: "0.08em",
+                          color: "var(--text-muted)",
+                          marginBottom: 6,
+                        }}
+                      >
+                        Contacts Reached
+                      </div>
+                      <div
+                        style={{
+                          fontSize: 16,
+                          fontWeight: 500,
+                          color: "var(--text)",
+                        }}
+                      >
                         {tier.contacts}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
