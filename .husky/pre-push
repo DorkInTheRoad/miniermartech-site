@@ -1,0 +1,20 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 Running TypeScript type check..."
+npx tsc --noEmit
+
+if [ $? -ne 0 ]; then
+  echo "❌ TypeScript errors found. Push blocked."
+  exit 1
+fi
+
+echo "🏗️  Running full Next.js build..."
+npm run build
+
+if [ $? -ne 0 ]; then
+  echo "❌ Build failed. Push blocked."
+  exit 1
+fi
+
+echo "✅ All checks passed. Proceeding with push."
