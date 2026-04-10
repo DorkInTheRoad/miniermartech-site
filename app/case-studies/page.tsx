@@ -168,7 +168,7 @@ export default function CaseStudiesPage() {
             Start with a $750 Pipeline Audit. We diagnose, you decide.
           </p>
           <Link href="/contact" className="btn-coral" style={{ padding: "16px 36px", borderRadius: 8, fontSize: 16, fontWeight: 600 }}>
-            Start a Conversation
+            Engineer Your Outbound
           </Link>
         </div>
       </section>

@@ -177,7 +177,7 @@ export default function AboutPage() {
             No sales team. No hand-off to an account manager. One conversation with the person who will build and operate your pipeline.
           </p>
           <Link href="/contact" className="btn-coral" style={{ padding: "16px 36px", borderRadius: 8, fontSize: 16, fontWeight: 600 }}>
-            Start a Conversation
+            Build it With Us
           </Link>
         </div>
       </section>

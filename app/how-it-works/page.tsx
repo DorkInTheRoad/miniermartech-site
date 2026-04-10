@@ -243,7 +243,7 @@ export default function HowItWorksPage() {
             background: "var(--accent-coral)", color: "var(--text)", padding: "16px 36px",
             borderRadius: 8, textDecoration: "none", fontSize: 16, fontWeight: 600, display: "inline-block",
           }}>
-            Start a Conversation
+            Model Your Funnel
           </Link>
         </div>
       </section>

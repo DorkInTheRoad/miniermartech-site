@@ -58,12 +58,36 @@ export default function ContactForm() {
     return false;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setLoading(true);
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          company,
+          need,
+          bizType,
+          status,
+          goals,
+          notes,
+          linkedin,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Failed to submit form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Error submitting form. Please try again.");
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 1400);
+    }
   };
 
   if (submitted) {

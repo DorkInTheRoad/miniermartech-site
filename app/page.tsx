@@ -64,7 +64,7 @@ export default function Home() {
               <Link href="/contact" className="btn-coral" style={{
                 padding: "16px 32px", borderRadius: 8, fontSize: 16, fontWeight: 600,
               }}>
-                Schedule a Strategy Call
+                Engineer Your Outbound
               </Link>
               <Link href="/how-it-works" className="link-arrow">
                 See How It Works <span style={{ fontSize: 18 }}>→</span>

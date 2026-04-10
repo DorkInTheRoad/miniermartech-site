@@ -220,7 +220,7 @@ export default function ArticlePage() {
               </p>
               <div style={{ display: "flex", gap: 16, flexWrap: "wrap" as const }}>
                 <Link href="/contact" className="btn-coral" style={{ padding: "13px 28px", borderRadius: 8, fontSize: 14, fontWeight: 600 }}>
-                  Start a Conversation
+                  Build it With Us
                 </Link>
                 <Link href="/services" style={{ padding: "13px 28px", borderRadius: 8, fontSize: 14, fontWeight: 600, border: "1px solid var(--border)", color: "var(--text-muted)", textDecoration: "none" }}>
                   View Services
