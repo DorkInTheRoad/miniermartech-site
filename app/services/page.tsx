@@ -210,7 +210,8 @@ export default function ServicesPage() {
             Services
           </h1>
           <p style={{ fontSize: 18, color: "var(--text-muted)", lineHeight: 1.6 }}>
-            From infrastructure to intelligence to innovation.
+            We operate your outbound pipeline. Most agencies execute campaigns. We architect the SLM
+            infrastructure that compounds your output and efficiency.
           </p>
         </div>
       </section>
@@ -361,6 +362,142 @@ export default function ServicesPage() {
           </div>
         </section>
       ))}
+
+      <section style={{ padding: "80px 24px", background: "var(--bg)" }}>
+        <div style={{ maxWidth: 800, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 48 }}>
+            <h2
+              style={{
+                fontFamily: "var(--font-fraunces)",
+                fontSize: "clamp(26px, 3vw, 38px)",
+                fontWeight: 700,
+                letterSpacing: "-0.02em",
+                marginBottom: 24,
+              }}
+            >
+              The SLM Infrastructure Advantage
+            </h2>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 28,
+              fontSize: 16,
+              lineHeight: 1.8,
+              color: "var(--text-muted)",
+            }}
+          >
+            <p>
+              Minier MarTech operates your pipeline the way a practice operates—with expertise that
+              compounds over time.
+            </p>
+            <p>
+              Most agencies execute sequences. We execute sequences{" "}
+              <span style={{ color: "var(--text)", fontWeight: 500 }}>
+                and architect the SLM layer underneath
+              </span>
+              &mdash;routing logic, behavioral modeling, predictive scoring, signal compounding.
+              That infrastructure difference is why Phase 1 feeds Phase 2, and Phase 2 feeds Phase
+              3.
+            </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: 32,
+                marginTop: 12,
+              }}
+            >
+              <div>
+                <div
+                  style={{
+                    fontSize: 13,
+                    fontWeight: 700,
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    color: "var(--accent-blue)",
+                    marginBottom: 12,
+                  }}
+                >
+                  Compound Output
+                </div>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    padding: 0,
+                    margin: 0,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 8,
+                  }}
+                >
+                  {[
+                    "Better contact quality",
+                    "Higher volume reach",
+                    "Richer behavioral signal",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      style={{
+                        display: "flex",
+                        gap: 10,
+                        fontSize: 15,
+                        color: "var(--text-muted)",
+                      }}
+                    >
+                      <span style={{ color: "var(--accent-blue)", flexShrink: 0 }}>✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <div
+                  style={{
+                    fontSize: 13,
+                    fontWeight: 700,
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    color: "var(--accent-teal)",
+                    marginBottom: 12,
+                  }}
+                >
+                  Compound Efficiency
+                </div>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    padding: 0,
+                    margin: 0,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 8,
+                  }}
+                >
+                  {["Smarter routing", "Predictive scoring", "Automated workflows"].map((item) => (
+                    <li
+                      key={item}
+                      style={{
+                        display: "flex",
+                        gap: 10,
+                        fontSize: 15,
+                        color: "var(--text-muted)",
+                      }}
+                    >
+                      <span style={{ color: "var(--accent-teal)", flexShrink: 0 }}>✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <p style={{ marginTop: 12 }}>
+              That&apos;s not infrastructure as a buzzword. That&apos;s infrastructure as practice.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section style={{ padding: "80px 24px", background: "var(--bg)" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
