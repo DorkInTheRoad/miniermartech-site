@@ -143,7 +143,7 @@ export default function ArticlePage() {
           <ul style={{ listStyle: "none", padding: 0 }}>
             <li style={{ marginBottom: 12, paddingLeft: 20, position: "relative" }}>
               <span style={{ position: "absolute", left: 0, color: "var(--accent-purple)", fontWeight: 700 }}>•</span>
-              <strong>Financial Indicators:</strong> Is the company profitable? Growing or stagnating? EBITDA >$1M? Score 0–15 points.
+              <strong>Financial Indicators:</strong> Is the company profitable? Growing or stagnating? EBITDA &gt;$1M? Score 0–15 points.
             </li>
             <li style={{ marginBottom: 12, paddingLeft: 20, position: "relative" }}>
               <span style={{ position: "absolute", left: 0, color: "var(--accent-purple)", fontWeight: 700 }}>•</span>
