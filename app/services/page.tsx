@@ -407,7 +407,15 @@ export default function ServicesPage() {
                     color: "var(--text)",
                   }}
                 >
-                  {v.title}
+                  {v.title.split(/([&@])/g).map((part, i) =>
+                    part === "&" || part === "@" ? (
+                      <span key={i} style={{ fontFamily: "var(--font-inter)" }}>
+                        {part}
+                      </span>
+                    ) : (
+                      part
+                    )
+                  )}
                 </h3>
                 <ul
                   style={{
