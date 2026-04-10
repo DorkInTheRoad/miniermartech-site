@@ -164,6 +164,15 @@ const verticals = [
 export default function ServicesPage() {
   return (
     <>
+      <style>{`
+        .tier-card {
+          transition: all 0.2s ease;
+        }
+        .tier-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+      `}</style>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
@@ -286,22 +295,14 @@ export default function ServicesPage() {
               {phase.tiers.map((tier) => (
                 <div
                   key={tier.name}
+                  className="tier-card"
                   style={{
                     background: "var(--bg-card)",
                     border: "1px solid var(--border)",
                     borderTop: `3px solid ${phase.color}`,
                     borderRadius: 12,
                     padding: "36px 28px",
-                    transition: "all 0.2s ease",
                     cursor: "pointer",
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.transform = "translateY(-3px)";
-                    e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.4)";
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "none";
                   }}
                 >
                   <h3
