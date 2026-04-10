@@ -67,9 +67,9 @@ const phases = [
     color: "var(--accent-blue)",
     desc: "The foundational layer. ICP design, cohort architecture, data hygiene, and sequence execution — built and operated end-to-end.",
     tiers: [
-      { name: "LinkedIn Foundation", price: "$1,500/mo", contacts: "~700 contacts", responses: "~30–40", meetings: "8–12" },
-      { name: "Multi-Channel", price: "$2,500/mo", contacts: "~2,500 contacts", responses: "~100–140", meetings: "18–28" },
-      { name: "Scale", price: "$3,500/mo", contacts: "~5,000 contacts", responses: "~200–280", meetings: "35–55" },
+      { name: "LinkedIn Foundation", price: "$1,500/mo", contacts: "~700 contacts" },
+      { name: "Multi-Channel", price: "$2,500/mo", contacts: "~2,500 contacts" },
+      { name: "Scale", price: "$3,500/mo", contacts: "~5,000 contacts" },
     ],
   },
   {
@@ -79,8 +79,8 @@ const phases = [
     color: "var(--accent-purple)",
     desc: "Once your pipeline is generating signal, we model it. Predictive scoring and market intelligence reports built on your behavioral data.",
     tiers: [
-      { name: "Predictive Lead Scoring", price: "$750/mo", contacts: "Ongoing model", responses: "Score updates", meetings: "Monthly calibration" },
-      { name: "Market Intelligence Reports", price: "$1,200/mo", contacts: "Segment analysis", responses: "ICP refinement", meetings: "Quarterly deep-dives" },
+      { name: "Predictive Lead Scoring", price: "$750/mo", contacts: "Ongoing model" },
+      { name: "Market Intelligence Reports", price: "$1,200/mo", contacts: "Segment analysis" },
     ],
   },
   {
@@ -90,9 +90,9 @@ const phases = [
     color: "var(--accent-teal)",
     desc: "Custom engineering built on top of your proprietary data. Automation, AI chatbots, persona engines, and knowledge systems that compound your competitive advantage.",
     tiers: [
-      { name: "Custom Automation", price: "From $2,500", contacts: "Workflow design", responses: "Integration build", meetings: "Ongoing optimization" },
-      { name: "Custom AI Chatbots", price: "From $3,500", contacts: "Training data prep", responses: "Model deployment", meetings: "Quarterly retraining" },
-      { name: "Knowledge Engine Retainer", price: "$4,500/mo", contacts: "Full system", responses: "Continuous enrichment", meetings: "Monthly review" },
+      { name: "Custom Automation", price: "From $2,500", contacts: "Workflow design" },
+      { name: "Custom AI Chatbots", price: "From $3,500", contacts: "Training data prep" },
+      { name: "Knowledge Engine Retainer", price: "$4,500/mo", contacts: "Full system" },
     ],
   },
 ];
@@ -100,7 +100,7 @@ const phases = [
 const verticals = [
   {
     title: "PE Business Development",
-    icon: "📊",
+    icon: "",
     color: "var(--accent-teal)",
     points: [
       "PE and family office BD teams sourcing proprietary deal flow",
@@ -110,7 +110,7 @@ const verticals = [
   },
   {
     title: "M&A Advisory",
-    icon: "⚖",
+    icon: "",
     color: "var(--accent-blue)",
     points: [
       "Boutique M&A advisors in the lower-middle market",
@@ -120,7 +120,7 @@ const verticals = [
   },
   {
     title: "RIA Consolidation & Roll-Up",
-    icon: "📈",
+    icon: "",
     color: "var(--accent-coral)",
     points: [
       "RIA roll-up platforms and acquirers targeting independent advisors",
@@ -130,7 +130,7 @@ const verticals = [
   },
   {
     title: "Business Brokerage",
-    icon: "🤝",
+    icon: "",
     color: "var(--accent-purple)",
     points: [
       "IBBA/CBI-credentialed brokers in the $500K–$10M deal range",
@@ -189,8 +189,6 @@ export default function ServicesPage() {
                     <th style={{ textAlign: "left", padding: "14px 20px", color: "var(--text)", fontWeight: 600, whiteSpace: "nowrap" as const }}>Tier</th>
                     <th style={{ textAlign: "left", padding: "14px 20px", color: "var(--text)", fontWeight: 600, whiteSpace: "nowrap" as const }}>Monthly Cost</th>
                     <th style={{ textAlign: "left", padding: "14px 20px", color: "var(--text)", fontWeight: 600, whiteSpace: "nowrap" as const }}>Contacts Reached</th>
-                    <th style={{ textAlign: "left", padding: "14px 20px", color: "var(--text)", fontWeight: 600, whiteSpace: "nowrap" as const }}>Responses</th>
-                    <th style={{ textAlign: "left", padding: "14px 20px", color: "var(--text)", fontWeight: 600, whiteSpace: "nowrap" as const }}>Qualified Meetings</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -199,8 +197,6 @@ export default function ServicesPage() {
                       <td style={{ padding: "14px 20px", fontWeight: 600, color: "var(--text)" }}>{tier.name}</td>
                       <td style={{ padding: "14px 20px", color: phase.color, fontWeight: 600 }}>{tier.price}</td>
                       <td style={{ padding: "14px 20px", color: "var(--text-muted)" }}>{tier.contacts}</td>
-                      <td style={{ padding: "14px 20px", color: "var(--text-muted)" }}>{tier.responses}</td>
-                      <td style={{ padding: "14px 20px", color: "var(--text-muted)" }}>{tier.meetings}</td>
                     </tr>
                   ))}
                 </tbody>

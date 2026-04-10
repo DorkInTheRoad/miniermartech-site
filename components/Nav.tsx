@@ -13,10 +13,17 @@ const links = [
   { href: "/about", label: "About" },
 ];
 
+const getCTA = (pathname: string) => {
+  if (pathname === "/" || pathname === "/case-studies") return "Engineer Your Outbound";
+  if (pathname === "/how-it-works") return "Model Your Funnel";
+  return "Build it With Us";
+};
+
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const ctaText = getCTA(pathname);
   // Logo is loaded from /public/logo.png
 
   useEffect(() => {
@@ -94,7 +101,7 @@ export default function Nav() {
             onMouseOver={(e) => { e.currentTarget.style.background = "var(--accent-coral-hover)"; e.currentTarget.style.transform = "scale(1.03)"; }}
             onMouseOut={(e) => { e.currentTarget.style.background = "var(--accent-coral)"; e.currentTarget.style.transform = "scale(1)"; }}
           >
-            Start a Conversation
+            {ctaText}
           </Link>
         </div>
 
@@ -112,7 +119,7 @@ export default function Nav() {
               fontWeight: 600,
             }}
           >
-            Talk to Us
+            {ctaText}
           </Link>
           <button
             onClick={() => setMenuOpen(!menuOpen)}

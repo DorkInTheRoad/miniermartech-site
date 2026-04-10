@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -11,7 +12,15 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+const getCTA = (pathname: string) => {
+  if (pathname === "/" || pathname === "/case-studies") return "Engineer Your Outbound";
+  if (pathname === "/how-it-works") return "Model Your Funnel";
+  return "Build it With Us";
+};
+
 export default function Footer() {
+  const pathname = usePathname();
+  const ctaText = getCTA(pathname);
   return (
     <footer style={{ background: "#0d1520", borderTop: "1px solid var(--border)", marginTop: "auto" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 24px 40px" }}>
@@ -73,7 +82,7 @@ export default function Footer() {
               onMouseOver={(e) => (e.currentTarget.style.background = "var(--accent-coral-hover)")}
               onMouseOut={(e) => (e.currentTarget.style.background = "var(--accent-coral)")}
             >
-              Start a Conversation
+              {ctaText}
             </Link>
             <div style={{ marginTop: 8 }}>
               <a
