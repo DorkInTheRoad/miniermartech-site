@@ -1,6 +1,22 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
+const renderTitleWithCleanAmpersand = (text: string) => {
+  const parts = text.split("&");
+  if (parts.length === 1) return text;
+
+  return (
+    <>
+      {parts.map((part, i) => (
+        <span key={i}>
+          {part}
+          {i < parts.length - 1 && <span style={{ fontFamily: "var(--font-inter)" }}>&</span>}
+        </span>
+      ))}
+    </>
+  );
+};
+
 export const metadata: Metadata = {
   title: "Services — Minier MarTech",
   description:
@@ -98,7 +114,7 @@ const phases = [
     title: "Data Intelligence",
     timeline: "Months 3–6",
     color: "var(--accent-purple)",
-    desc: "Once your pipeline is generating signal, we model it. Predictive scoring and market intelligence reports built on your behavioral data. This data becomes the training foundation for your Client-Specific Language Model.",
+    desc: "Convert your campaign data into structured intelligence. Behavioral scoring, market patterns, contact segmentation — your proprietary dataset grows with every batch. Foundation for everything that comes next.",
     tiers: [
       { name: "Predictive Lead Scoring", price: "$750/mo", contacts: "Ongoing model" },
       { name: "Market Intelligence Reports", price: "$1,200/mo", contacts: "Segment analysis" },
@@ -109,7 +125,7 @@ const phases = [
     title: "The AI Moat",
     timeline: "Months 6+",
     color: "var(--accent-teal)",
-    desc: "A Client-Specific Language Model trained on your campaign data. Your proprietary AI learns what messaging, timing, and positioning resonates with your market. Two advantages: smarter automation for future campaigns, and AI Engine Optimization—your content appears when prospects ask ChatGPT or Perplexity about your industry.",
+    desc: "Your proprietary AI, trained entirely on your campaign data. It knows what resonates with your market because it learned from every contact, response, and sequence. Two outcomes: smarter automation for future campaigns, and visibility in every AI conversation about your space when prospects research.",
     tiers: [
       { name: "Custom Automation", price: "From $2,500", contacts: "Workflow design" },
       { name: "Custom AI Chatbots", price: "From $3,500", contacts: "Training data prep" },
@@ -261,7 +277,7 @@ export default function ServicesPage() {
                     lineHeight: 1.2,
                   }}
                 >
-                  {phase.title}
+                  {renderTitleWithCleanAmpersand(phase.title)}
                   <span
                     style={{
                       fontSize: 15,
