@@ -144,7 +144,7 @@ export default function CaseStudiesPage() {
                     },
                     {
                       label: "Result",
-                      text: "15+ qualified meetings per month at 17% average reply rate across active cohorts. Seller database now owned and enriched — compounding value every batch.",
+                      text: "17% average reply rate across active cohorts. Proprietary seller database now owned and enriched with 5,000+ behavioral data points. Infrastructure compounds value every batch.",
                     },
                   ].map((item) => (
                     <div key={item.label}>
@@ -188,9 +188,9 @@ export default function CaseStudiesPage() {
                 }}
               >
                 {[
-                  { value: 15, suffix: "+/Mo", label: "Meetings Booked" },
                   { value: 17, suffix: "%", label: "Reply Rate" },
                   { value: 10, suffix: "+ Mo", label: "Active Engagement" },
+                  { value: 5000, suffix: "+", label: "Behavioral Data Points Captured" },
                 ].map((m) => (
                   <div
                     key={m.label}
