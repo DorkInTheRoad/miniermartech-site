@@ -46,7 +46,7 @@ export default function Home() {
             zIndex: 1,
           }}
         >
-          <div style={{ maxWidth: 760 }}>
+          <div style={{ maxWidth: 760, margin: "0 auto" }}>
             <div
               style={{
                 display: "inline-flex",
