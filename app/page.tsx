@@ -1,7 +1,21 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import CounterBar from "@/components/CounterBar";
 
+const getCTA = (pathname: string) => {
+  if (pathname === "/" || pathname === "/case-studies") {
+    return "Engineer Your Outbound";
+  }
+  if (pathname === "/how-it-works") {
+    return "Model Your Funnel";
+  }
+  return "Build it With Us";
+};
+
 export default function Home() {
+  const pathname = usePathname();
   return (
     <>
       {/* Hero */}
@@ -323,7 +337,7 @@ export default function Home() {
               fontWeight: 600,
             }}
           >
-            Start a Conversation
+            {getCTA(pathname)}
           </Link>
         </div>
       </section>
