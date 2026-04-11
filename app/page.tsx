@@ -319,13 +319,13 @@ export default function Home() {
               lineHeight: 1.15,
             }}
           >
-            Ready to build predictable pipeline?
+            Ready to operate your pipeline?
           </h2>
           <p
             style={{ fontSize: 17, color: "var(--text-muted)", marginBottom: 40, lineHeight: 1.6 }}
           >
-            One conversation to scope your ICP, audit your current outreach, and map out what a
-            stable pipeline looks like for your business.
+            One conversation to audit your current infrastructure, understand your SLM gaps, and map
+            out how a compounding system changes your competitive position.
           </p>
           <Link
             href="/contact"
