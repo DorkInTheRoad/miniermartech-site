@@ -84,7 +84,7 @@ export default function Home() {
                 marginBottom: 24,
               }}
             >
-              Elite Outbound Campaigns.
+              <span style={{ whiteSpace: "nowrap" }}>Elite Outbound Campaigns.</span>
               <br />
               <span style={{ color: "var(--accent-gold)", whiteSpace: "nowrap" }}>
                 Enterprise-Grade Engineering.
