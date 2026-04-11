@@ -86,7 +86,7 @@ const phases = [
     title: "Pipeline Design & Execution",
     timeline: "Months 1–3",
     color: "var(--accent-blue)",
-    desc: "The foundational layer. ICP design, cohort architecture, data hygiene, and sequence execution — built and operated end-to-end.",
+    desc: "The foundational layer. ICP design, cohort architecture, data hygiene, and sequence execution — built and operated end-to-end. Every campaign generates behavioral data that feeds your proprietary systems.",
     tiers: [
       { name: "LinkedIn Foundation", price: "$1,500/mo", contacts: "~700 contacts" },
       { name: "Multi-Channel", price: "$2,500/mo", contacts: "~2,500 contacts" },
@@ -98,7 +98,7 @@ const phases = [
     title: "Data Intelligence",
     timeline: "Months 3–6",
     color: "var(--accent-purple)",
-    desc: "Once your pipeline is generating signal, we model it. Predictive scoring and market intelligence reports built on your behavioral data.",
+    desc: "Once your pipeline is generating signal, we model it. Predictive scoring and market intelligence reports built on your behavioral data. This data becomes the training foundation for your Client-Specific Language Model.",
     tiers: [
       { name: "Predictive Lead Scoring", price: "$750/mo", contacts: "Ongoing model" },
       { name: "Market Intelligence Reports", price: "$1,200/mo", contacts: "Segment analysis" },
@@ -109,7 +109,7 @@ const phases = [
     title: "The AI Moat",
     timeline: "Months 6+",
     color: "var(--accent-teal)",
-    desc: "Custom engineering built on top of your proprietary data. Automation, AI chatbots, persona engines, and knowledge systems that compound your competitive advantage.",
+    desc: "A Client-Specific Language Model trained on your campaign data. Your proprietary AI learns what messaging, timing, and positioning resonates with your market. Two advantages: smarter automation for future campaigns, and AI Engine Optimization—your content appears when prospects ask ChatGPT or Perplexity about your industry.",
     tiers: [
       { name: "Custom Automation", price: "From $2,500", contacts: "Workflow design" },
       { name: "Custom AI Chatbots", price: "From $3,500", contacts: "Training data prep" },
@@ -210,8 +210,9 @@ export default function ServicesPage() {
             Services
           </h1>
           <p style={{ fontSize: 18, color: "var(--text-muted)", lineHeight: 1.6 }}>
-            We operate your outbound pipeline. Most agencies execute campaigns. We architect the SLM
-            infrastructure that compounds your output and efficiency.
+            We operate your outbound pipeline. Most agencies execute campaigns. We build a
+            Client-Specific Language Model trained on your campaign data—so your company appears
+            when prospects ask AI tools about your market.
           </p>
         </div>
       </section>

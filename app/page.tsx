@@ -116,7 +116,8 @@ export default function Home() {
             >
               We design your origination pipeline, model your contacts, simulate their campaigns
               before they enter the funnel, and convert every campaign into a proprietary
-              intelligence asset your competitors cannot replicate.
+              intelligence asset. The data trains a Client-Specific Language Model—so when prospects
+              ask AI tools about your market, your company appears.
             </p>
 
             <div style={{ display: "flex", gap: 20, flexWrap: "wrap", alignItems: "center" }}>
