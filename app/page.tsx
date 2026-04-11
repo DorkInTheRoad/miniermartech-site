@@ -127,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* Three Pillars */}
-      <section style={{ padding: "100px 24px", background: "var(--bg)" }}>
+      <section style={{ padding: "60px 24px 100px", background: "var(--bg)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
             <h2
