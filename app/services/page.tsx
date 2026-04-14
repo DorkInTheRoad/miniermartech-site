@@ -40,7 +40,7 @@ const servicesSchema = {
       offers: {
         "@type": "AggregateOffer",
         lowPrice: "1500",
-        highPrice: "3500",
+        highPrice: "4700",
         priceCurrency: "USD",
         priceSpecification: { "@type": "UnitPriceSpecification", unitText: "month" },
       },
@@ -104,9 +104,34 @@ const phases = [
     color: "var(--accent-blue)",
     desc: "The foundational layer. ICP design, cohort architecture, data hygiene, and sequence execution — built and operated end-to-end. Every campaign generates behavioral data that feeds your proprietary systems.",
     tiers: [
-      { name: "LinkedIn Foundation", price: "$1,500/mo", contacts: "~700 contacts" },
-      { name: "Multi-Channel", price: "$2,500/mo", contacts: "~2,500 contacts" },
-      { name: "Scale", price: "$3,500/mo", contacts: "~5,000 contacts" },
+      {
+        name: "LinkedIn Foundation",
+        price: "$1,500/mo",
+        seats: "1 LinkedIn seat",
+        contacts: "~700 contacts/mo",
+        note: "",
+      },
+      {
+        name: "Multi-Channel 1.1",
+        price: "$2,500/mo",
+        seats: "1 LinkedIn + 1 Email seat",
+        contacts: "~700 LI + ~1,500–2,000 Email contacts/mo at full ramp",
+        note: "Email requires 7+ week warmup + dedicated subdomain",
+      },
+      {
+        name: "Multi-Channel 2.1",
+        price: "$3,300/mo",
+        seats: "2 LinkedIn + 1 Email seat",
+        contacts: "~1,400 LI + ~1,500–2,000 Email contacts/mo at full ramp",
+        note: "Email requires 7+ week warmup + dedicated subdomain",
+      },
+      {
+        name: "Multi-Channel 3.2",
+        price: "$4,700/mo",
+        seats: "3 LinkedIn + 2 Email seats",
+        contacts: "~2,100 LI + ~3,000–4,000 Email contacts/mo at full ramp",
+        note: "Email requires 7+ week warmup + dedicated subdomain",
+      },
     ],
   },
   {
@@ -116,8 +141,20 @@ const phases = [
     color: "var(--accent-purple)",
     desc: "Convert your campaign data into structured intelligence. Behavioral scoring, market patterns, contact segmentation — your proprietary dataset grows with every batch. Foundation for everything that comes next.",
     tiers: [
-      { name: "Predictive Lead Scoring", price: "$750/mo", contacts: "Ongoing model" },
-      { name: "Market Intelligence Reports", price: "$1,200/mo", contacts: "Segment analysis" },
+      {
+        name: "Predictive Lead Scoring",
+        price: "$750/mo",
+        contacts: "Ongoing model",
+        seats: "",
+        note: "",
+      },
+      {
+        name: "Market Intelligence Reports",
+        price: "$1,200/mo",
+        contacts: "Segment analysis",
+        seats: "",
+        note: "",
+      },
     ],
   },
   {
@@ -127,9 +164,27 @@ const phases = [
     color: "var(--accent-teal)",
     desc: "Your proprietary AI, trained entirely on your campaign data. It knows what resonates with your market because it learned from every contact, response, and sequence. Two outcomes: smarter automation for future campaigns, and visibility in every AI conversation about your space when prospects research.",
     tiers: [
-      { name: "Custom Automation", price: "From $2,500", contacts: "Workflow design" },
-      { name: "Custom AI Chatbots", price: "From $3,500", contacts: "Training data prep" },
-      { name: "Knowledge Engine Retainer", price: "$4,500/mo", contacts: "Full system" },
+      {
+        name: "Custom Automation",
+        price: "From $2,500",
+        contacts: "Workflow design",
+        seats: "",
+        note: "",
+      },
+      {
+        name: "Custom AI Chatbots",
+        price: "From $3,500",
+        contacts: "Training data prep",
+        seats: "",
+        note: "",
+      },
+      {
+        name: "Knowledge Engine Retainer",
+        price: "$4,500/mo",
+        contacts: "Full system",
+        seats: "",
+        note: "",
+      },
     ],
   },
 ];
@@ -349,6 +404,31 @@ export default function ServicesPage() {
                   </div>
 
                   <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                    {"seats" in tier && tier.seats && (
+                      <div>
+                        <div
+                          style={{
+                            fontSize: 11,
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.08em",
+                            color: "var(--text-muted)",
+                            marginBottom: 6,
+                          }}
+                        >
+                          Seats
+                        </div>
+                        <div
+                          style={{
+                            fontSize: 15,
+                            fontWeight: 500,
+                            color: "var(--text)",
+                          }}
+                        >
+                          {tier.seats}
+                        </div>
+                      </div>
+                    )}
                     <div>
                       <div
                         style={{
@@ -364,7 +444,7 @@ export default function ServicesPage() {
                       </div>
                       <div
                         style={{
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: 500,
                           color: "var(--text)",
                         }}
@@ -372,6 +452,20 @@ export default function ServicesPage() {
                         {tier.contacts}
                       </div>
                     </div>
+                    {"note" in tier && tier.note && (
+                      <div
+                        style={{
+                          fontSize: 12,
+                          color: "var(--text-muted)",
+                          lineHeight: 1.6,
+                          borderTop: "1px solid var(--border)",
+                          paddingTop: 12,
+                          fontStyle: "italic",
+                        }}
+                      >
+                        {tier.note}
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
@@ -727,7 +821,7 @@ export default function ServicesPage() {
                 marginBottom: 12,
               }}
             >
-              Before the retainer — or alongside it
+              Before the retainer. Or alongside it.
             </h2>
             <p
               style={{ fontSize: 16, color: "var(--text-muted)", maxWidth: 520, margin: "0 auto" }}
@@ -904,12 +998,12 @@ export default function ServicesPage() {
                 href="/contact"
                 style={{
                   padding: "13px 28px",
-                  borderRadius: 8,
+                  borderRadius: 20,
                   fontSize: 14,
                   fontWeight: 600,
                   display: "inline-block",
-                  border: "1px solid var(--accent-teal)",
-                  color: "var(--accent-teal)",
+                  background: "var(--accent-teal)",
+                  color: "#111827",
                   textDecoration: "none",
                 }}
               >
