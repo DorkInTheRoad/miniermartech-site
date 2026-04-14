@@ -121,9 +121,9 @@ const phases = [
       {
         name: "Add-ons & Diagnostics",
         price: "$750–$2,500",
-        seats: "",
-        contacts: "",
-        note: "Pipeline Audit ($750): Current infrastructure assessment, ICP fit analysis, and prioritized recommendations. Engine Optimization ($750–$2,500/mo): AEO/SEO audit, LLM crawler configuration, JSON-LD schema setup, and AI citation strategy.",
+        seats: "Service-specific",
+        contacts: "Pipeline Audit ($750 flat) or Engine Optimization ($750–$2,500/mo)",
+        note: "Pipeline Audit: infrastructure assessment, ICP analysis, recommendations. Engine Optimization: AEO/SEO audit, LLM configuration, JSON-LD schema, AI citation strategy.",
       },
     ],
   },
