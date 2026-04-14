@@ -118,14 +118,6 @@ const phases = [
         contacts: "1,500–2,000 contacts/month per seat",
         note: "Requires active LinkedIn subscription. 7+ week warmup + dedicated subdomain.",
       },
-      {
-        name: "Add-ons & Diagnostics",
-        price: "$750–$2,500",
-        seats: "",
-        contacts:
-          "Pipeline Audit ($750): infrastructure assessment, ICP analysis, recommendations. Engine Optimization ($750–$2,500/mo): AEO/SEO audit, LLM configuration, JSON-LD schema, AI citation strategy.",
-        note: "",
-      },
     ],
   },
   {
