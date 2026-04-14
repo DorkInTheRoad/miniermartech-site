@@ -121,9 +121,9 @@ const phases = [
       {
         name: "Add-ons & Diagnostics",
         price: "$750–$2,500",
-        seats: "À la carte",
-        contacts: "Pipeline Audit or Engine Optimization",
-        note: "Pipeline Audit: $750 flat. Engine Optimization (AEO/SEO): $750–$2,500/mo.",
+        seats: "One-time or Monthly",
+        contacts: "Pipeline Audit · Engine Optimization",
+        note: "Pipeline Audit: $750 flat diagnostic. Engine Optimization (AEO/SEO): $750–$2,500/mo retainer.",
       },
     ],
   },
