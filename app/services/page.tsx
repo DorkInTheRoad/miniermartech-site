@@ -422,29 +422,31 @@ export default function ServicesPage() {
                         </div>
                       </div>
                     )}
-                    <div>
-                      <div
-                        style={{
-                          fontSize: 11,
-                          fontWeight: 600,
-                          textTransform: "uppercase",
-                          letterSpacing: "0.08em",
-                          color: "var(--text-muted)",
-                          marginBottom: 6,
-                        }}
-                      >
-                        Contacts Reached
+                    {"contacts" in tier && tier.contacts && (
+                      <div>
+                        <div
+                          style={{
+                            fontSize: 11,
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.08em",
+                            color: "var(--text-muted)",
+                            marginBottom: 6,
+                          }}
+                        >
+                          Contacts Reached
+                        </div>
+                        <div
+                          style={{
+                            fontSize: 15,
+                            fontWeight: 500,
+                            color: "var(--text)",
+                          }}
+                        >
+                          {tier.contacts}
+                        </div>
                       </div>
-                      <div
-                        style={{
-                          fontSize: 15,
-                          fontWeight: 500,
-                          color: "var(--text)",
-                        }}
-                      >
-                        {tier.contacts}
-                      </div>
-                    </div>
+                    )}
                     {"note" in tier && tier.note && (
                       <div
                         style={{
