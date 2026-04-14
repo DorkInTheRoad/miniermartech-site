@@ -103,36 +103,37 @@ const phases = [
     timeline: "Months 1–3",
     color: "var(--accent-blue)",
     desc: "The foundational layer. ICP design, cohort architecture, data hygiene, and sequence execution — built and operated end-to-end. Every campaign generates behavioral data that feeds your proprietary systems.",
-    tiers: [
-      {
-        name: "LinkedIn Foundation",
-        price: "$1,500/mo",
-        seats: "1 LinkedIn seat",
-        contacts: "~700 contacts/mo",
-        note: "",
-      },
-      {
-        name: "Multi-Channel 1.1",
-        price: "$2,500/mo",
-        seats: "1 LinkedIn + 1 Email seat",
-        contacts: "~700 LI + ~1,500–2,000 Email contacts/mo at full ramp",
-        note: "Email requires 7+ week warmup + dedicated subdomain",
-      },
-      {
-        name: "Multi-Channel 2.1",
-        price: "$3,300/mo",
-        seats: "2 LinkedIn + 1 Email seat",
-        contacts: "~1,400 LI + ~1,500–2,000 Email contacts/mo at full ramp",
-        note: "Email requires 7+ week warmup + dedicated subdomain",
-      },
-      {
-        name: "Multi-Channel 3.2",
-        price: "$4,700/mo",
-        seats: "3 LinkedIn + 2 Email seats",
-        contacts: "~2,100 LI + ~3,000–4,000 Email contacts/mo at full ramp",
-        note: "Email requires 7+ week warmup + dedicated subdomain",
-      },
-    ],
+    isTextBased: true,
+    tiers: [],
+    pricing: {
+      linkedinOutreach: [
+        {
+          name: "LinkedIn Foundation",
+          price: "$1,500/mo",
+          details: "1 seat — 700 contacts/month",
+        },
+        {
+          name: "Additional LinkedIn Seat",
+          price: "+$800/mo",
+          details: "700 contacts/month per seat",
+        },
+      ],
+      emailOutreach: [
+        {
+          name: "Email Seat",
+          price: "+$1,000/mo",
+          details: "1,500–2,000 contacts/month at full ramp",
+          note: "Email requires 7+ week warmup + dedicated subdomain",
+        },
+        {
+          name: "Additional Email Seat",
+          price: "+$600/mo",
+          details: "1,500–2,000 contacts/month per seat",
+          note: "Email requires 7+ week warmup + dedicated subdomain",
+        },
+      ],
+      emailNote: "Email Outreach is an add-on — requires active LinkedIn subscription.",
+    },
   },
   {
     num: "Phase 2",
@@ -358,53 +359,160 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                gap: 24,
-              }}
-            >
-              {phase.tiers.map((tier) => (
-                <div
-                  key={tier.name}
-                  className="tier-card"
-                  style={{
-                    background: "var(--bg-card)",
-                    border: "1px solid var(--border)",
-                    borderTop: `3px solid ${phase.color}`,
-                    borderRadius: 12,
-                    padding: "36px 28px",
-                    cursor: "pointer",
-                  }}
-                >
+            {phase.isTextBased ? (
+              <div style={{ maxWidth: 640 }}>
+                <div style={{ marginBottom: 40 }}>
                   <h3
                     style={{
-                      fontFamily: "var(--font-fraunces)",
-                      fontSize: 22,
+                      fontSize: 16,
                       fontWeight: 700,
-                      marginBottom: 12,
                       color: "var(--text)",
-                      lineHeight: 1.2,
+                      marginBottom: 20,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.06em",
                     }}
                   >
-                    {tier.name}
+                    LinkedIn Outreach
                   </h3>
+                  {phase.pricing.linkedinOutreach.map((tier) => (
+                    <div key={tier.name} style={{ marginBottom: 16 }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", gap: 16 }}>
+                        <span style={{ color: "var(--text)", fontWeight: 500 }}>{tier.name}</span>
+                        <span style={{ color: phase.color, fontWeight: 700, flexShrink: 0 }}>
+                          {tier.price}
+                        </span>
+                      </div>
+                      <div style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 4 }}>
+                        {tier.details}
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
-                  <div
+                <div>
+                  <h3
                     style={{
-                      fontSize: 24,
+                      fontSize: 16,
                       fontWeight: 700,
-                      color: phase.color,
-                      marginBottom: 28,
-                      fontFamily: "var(--font-fraunces)",
+                      color: "var(--text)",
+                      marginBottom: 8,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.06em",
                     }}
                   >
-                    {tier.price}
-                  </div>
+                    Email Outreach (add-on)
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: 13,
+                      color: "var(--text-muted)",
+                      marginBottom: 20,
+                      fontStyle: "italic",
+                    }}
+                  >
+                    {phase.pricing.emailNote}
+                  </p>
+                  {phase.pricing.emailOutreach.map((tier) => (
+                    <div key={tier.name} style={{ marginBottom: 16 }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", gap: 16 }}>
+                        <span style={{ color: "var(--text)", fontWeight: 500 }}>{tier.name}</span>
+                        <span style={{ color: phase.color, fontWeight: 700, flexShrink: 0 }}>
+                          {tier.price}
+                        </span>
+                      </div>
+                      <div style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 4 }}>
+                        {tier.details}
+                      </div>
+                      {tier.note && (
+                        <div
+                          style={{
+                            fontSize: 12,
+                            color: "var(--text-muted)",
+                            marginTop: 8,
+                            borderTop: "1px solid var(--border)",
+                            paddingTop: 8,
+                            fontStyle: "italic",
+                          }}
+                        >
+                          {tier.note}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                  gap: 24,
+                }}
+              >
+                {phase.tiers.map((tier) => (
+                  <div
+                    key={tier.name}
+                    className="tier-card"
+                    style={{
+                      background: "var(--bg-card)",
+                      border: "1px solid var(--border)",
+                      borderTop: `3px solid ${phase.color}`,
+                      borderRadius: 12,
+                      padding: "36px 28px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <h3
+                      style={{
+                        fontFamily: "var(--font-fraunces)",
+                        fontSize: 22,
+                        fontWeight: 700,
+                        marginBottom: 12,
+                        color: "var(--text)",
+                        lineHeight: 1.2,
+                      }}
+                    >
+                      {tier.name}
+                    </h3>
 
-                  <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-                    {"seats" in tier && tier.seats && (
+                    <div
+                      style={{
+                        fontSize: 24,
+                        fontWeight: 700,
+                        color: phase.color,
+                        marginBottom: 28,
+                        fontFamily: "var(--font-fraunces)",
+                      }}
+                    >
+                      {tier.price}
+                    </div>
+
+                    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                      {"seats" in tier && tier.seats && (
+                        <div>
+                          <div
+                            style={{
+                              fontSize: 11,
+                              fontWeight: 600,
+                              textTransform: "uppercase",
+                              letterSpacing: "0.08em",
+                              color: "var(--text-muted)",
+                              marginBottom: 6,
+                            }}
+                          >
+                            Seats
+                          </div>
+                          <div
+                            style={{
+                              fontSize: 15,
+                              fontWeight: 500,
+                              color: "var(--text)",
+                            }}
+                          >
+                            {tier.seats}
+                          </div>
+                        </div>
+                      )}
                       <div>
                         <div
                           style={{
@@ -416,7 +524,7 @@ export default function ServicesPage() {
                             marginBottom: 6,
                           }}
                         >
-                          Seats
+                          Contacts Reached
                         </div>
                         <div
                           style={{
@@ -425,51 +533,28 @@ export default function ServicesPage() {
                             color: "var(--text)",
                           }}
                         >
-                          {tier.seats}
+                          {tier.contacts}
                         </div>
                       </div>
-                    )}
-                    <div>
-                      <div
-                        style={{
-                          fontSize: 11,
-                          fontWeight: 600,
-                          textTransform: "uppercase",
-                          letterSpacing: "0.08em",
-                          color: "var(--text-muted)",
-                          marginBottom: 6,
-                        }}
-                      >
-                        Contacts Reached
-                      </div>
-                      <div
-                        style={{
-                          fontSize: 15,
-                          fontWeight: 500,
-                          color: "var(--text)",
-                        }}
-                      >
-                        {tier.contacts}
-                      </div>
+                      {"note" in tier && tier.note && (
+                        <div
+                          style={{
+                            fontSize: 12,
+                            color: "var(--text-muted)",
+                            lineHeight: 1.6,
+                            borderTop: "1px solid var(--border)",
+                            paddingTop: 12,
+                            fontStyle: "italic",
+                          }}
+                        >
+                          {tier.note}
+                        </div>
+                      )}
                     </div>
-                    {"note" in tier && tier.note && (
-                      <div
-                        style={{
-                          fontSize: 12,
-                          color: "var(--text-muted)",
-                          lineHeight: 1.6,
-                          borderTop: "1px solid var(--border)",
-                          paddingTop: 12,
-                          fontStyle: "italic",
-                        }}
-                      >
-                        {tier.note}
-                      </div>
-                    )}
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       ))}
