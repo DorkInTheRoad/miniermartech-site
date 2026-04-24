@@ -2,8 +2,18 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function CounterInline({ value, suffix, format, small }: {
-  value: number; suffix: string; format?: boolean; small?: boolean;
+export default function CounterInline({
+  value,
+  suffix,
+  format,
+  small,
+  decimal,
+}: {
+  value: number;
+  suffix: string;
+  format?: boolean;
+  small?: boolean;
+  decimal?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [count, setCount] = useState(0);
@@ -11,7 +21,9 @@ export default function CounterInline({ value, suffix, format, small }: {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting && !fired) setFired(true); },
+      ([entry]) => {
+        if (entry.isIntersecting && !fired) setFired(true);
+      },
       { threshold: 0.5 }
     );
     if (ref.current) observer.observe(ref.current);
@@ -32,18 +44,26 @@ export default function CounterInline({ value, suffix, format, small }: {
     requestAnimationFrame(step);
   }, [fired, value]);
 
-  const display = format ? Math.floor(count).toLocaleString() : Math.floor(count);
+  const display = format
+    ? Math.floor(count).toLocaleString()
+    : decimal
+      ? count.toFixed(1)
+      : Math.floor(count);
 
   return (
-    <div ref={ref} style={{
-      fontFamily: "var(--font-fraunces)",
-      fontSize: small ? "clamp(22px, 2.5vw, 28px)" : "clamp(32px, 3vw, 42px)",
-      fontWeight: 700,
-      color: "var(--text)",
-      letterSpacing: "-0.02em",
-      lineHeight: 1,
-    }}>
-      {display}{suffix}
+    <div
+      ref={ref}
+      style={{
+        fontFamily: "var(--font-fraunces)",
+        fontSize: small ? "clamp(22px, 2.5vw, 28px)" : "clamp(32px, 3vw, 42px)",
+        fontWeight: 700,
+        color: "var(--text)",
+        letterSpacing: "-0.02em",
+        lineHeight: 1,
+      }}
+    >
+      {display}
+      {suffix}
     </div>
   );
 }

@@ -266,6 +266,18 @@ export default function CaseStudiesPage() {
                 ],
                 desc: "Full data audit of existing contact database from a leading outreach vendor. 24% of records contained invalid emails, stale titles, or duplicate entries. Database rebuilt clean before any campaign launched.",
               },
+              {
+                badge: "LIVE",
+                color: "var(--accent-gold)",
+                title: "Fractional Executive Firm — LinkedIn Origination",
+                sub: "Systematic Origination / Fractional Operators",
+                metrics: [
+                  { value: 16.8, suffix: "%", label: "Reply Rate", decimal: true },
+                  { value: 30, suffix: " Days", label: "Campaign Window" },
+                  { value: 9, suffix: "", label: "Active Conversations" },
+                ],
+                desc: "A fractional CFO firm running on referrals needed systematic deal flow. 8-touch LinkedIn sequence, ICP-verified contacts, data hygiene before first send. 16.8% reply rate in 30 days — roughly 4x the cold B2B average. Nine active pipeline conversations opened.",
+              },
             ].map((study) => (
               <div
                 key={study.title}
@@ -336,6 +348,7 @@ export default function CaseStudiesPage() {
                         value={m.value}
                         suffix={m.suffix}
                         format={"format" in m ? (m.format as boolean) : false}
+                        decimal={"decimal" in m ? (m.decimal as boolean) : false}
                         small
                       />
                       <div
